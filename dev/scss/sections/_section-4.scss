@@ -1,0 +1,103 @@
+/* =============
+    Section 4
+============= */
+#section-4 {
+
+    >div {
+        #section-4-title {
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+
+    #gallery {
+
+        ul {
+            list-style: none;
+            grid-area: list;
+
+            @include md {
+                display: grid;
+                grid-template-areas: "gallery-1 gallery-2"
+                    "gallery-3 gallery-4";
+                grid-template-columns: 50% 50%;
+                grid-gap: 15px;
+            }
+
+            @include lg {
+                padding-left: 40px;
+                padding-right: 40px;
+
+            }
+
+            @include xl {
+                padding-left: 100px;
+                padding-right: 100px;
+
+            }
+
+
+            li {
+                background-color: $yellow;
+
+                aside {
+                    height: 250px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                p {
+                    padding: 10px;
+                    line-height: rem-calc(27);
+                    font-size: rem-calc(16);
+                }
+
+            }
+
+        }
+
+        li#gallery-1 {
+            grid-area: gallery-1;
+
+            aside {
+                background-image: url('../img/section-4/1.png');
+
+            }
+
+        }
+
+        #gallery-2 {
+            grid-area: gallery-2;
+
+            aside {
+                background-image: url('../img/section-4/2.png');
+
+            }
+
+        }
+
+        #gallery-3 {
+            grid-area: gallery-3;
+
+            aside {
+                background-image: url('../img/section-4/3.png');
+
+            }
+
+        }
+
+        #gallery-4 {
+            grid-area: gallery-4;
+
+            aside {
+                background-image: url('../img/section-4/4.png');
+
+            }
+
+
+        }
+
+    }
+}

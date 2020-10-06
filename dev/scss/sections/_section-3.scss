@@ -1,0 +1,87 @@
+/* =============
+    Section 3
+============= */
+#section-3 {
+
+
+    h1 {
+        text-align: center;
+    }
+
+    #container {
+        display: block;
+        grid-area: container;
+
+        @include md {
+            grid-template-areas: "picture text";
+            grid-template-columns: 40% auto;
+            display: grid;
+
+        }
+
+        #section-3-image {
+            grid-area: picture;
+            display: grid;
+
+            aside {
+                background-image: url('../img/section-3/washington.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 330px;
+                display: grid;
+                padding: 10px;
+
+                @include md {
+                    height: 1000px;
+
+
+                }
+
+                @include lg {
+                    margin: 20px;
+                }
+
+            }
+        }
+
+        #section-3-text {
+            grid-area: text;
+            display: grid;
+
+            p {
+                padding: 10px;
+                line-height: rem-calc(33);
+                font-size: rem-calc(17);
+                padding-top: 20px;
+
+                @include lg {
+                    padding-right: 175px;
+                }
+            }
+
+            h2 {
+                line-height: rem-calc(31);
+                font-size: rem-calc(21);
+                background-color: $pink;
+                color: $blue;
+                padding-top: 80px;
+                padding-bottom: 80px;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+
+                @include md {
+                    margin: 10px;
+                }
+
+            }
+        }
+
+
+    }
+
+
+
+
+}

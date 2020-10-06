@@ -1,3 +1,67 @@
 /* =============
     Header
 ============= */
+
+    header {
+        background-color: $pink;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+       
+        >div {
+            display: grid;
+            grid-template-areas:
+             "logo burger"
+             "nav nav";
+            grid-template-columns: 80% auto;
+     
+            section,
+            nav {
+                padding: 0px;
+                
+            }
+    
+            #logo-container {
+                grid-area: logo;
+                padding-left: 15px;
+
+                @include md{
+                    display: none;
+                }
+                
+            }
+            #burger-container {
+                align-items: center;
+                display: flex;
+                grid-area: burger;
+                justify-content: flex-end;
+                padding-right: 15px;
+                
+    
+                @include md {
+                    display: none !important;
+                }
+                i {
+                    cursor: pointer;
+                }
+            }
+    
+            #nav-container {
+                background-color: $pink;
+                grid-area: nav;
+                display: none;
+                padding: 0px;
+                text-align: center;
+                
+    
+                @include md {
+                    display: block !important;
+                }
+            }
+    
+    
+        }
+    }
+
+

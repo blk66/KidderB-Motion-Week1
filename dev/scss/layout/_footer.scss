@@ -1,3 +1,27 @@
 /* =============
     Footer
 ============= */
+
+footer{
+    background-color: $pink ;
+    padding: 11px 0;
+    grid-template-areas: "img text";
+    grid-template-columns: 50% 50%;
+    display: grid;
+    
+
+    >div{
+        grid-area: img;
+   
+    }
+
+    p{
+        grid-area: text;
+        position: relative;
+        text-align : right;
+        padding-top: 25px;
+        padding-right: 15px;
+        
+    }
+
+}

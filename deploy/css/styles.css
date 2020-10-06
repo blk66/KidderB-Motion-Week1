@@ -353,44 +353,54 @@ template {
     Base
 ============= */
 figure {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 ul {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 ul li {
   list-style: none;
 }
 
-.container-grid {
-  display: grid;
-  grid-template-areas: ". grid-content .";
-  grid-template-columns: 15px auto 15px;
-  height: 100vh;
-}
-@media (min-width: 1200px) {
-  .container-grid {
-    grid-template-columns: auto 1200px auto;
-  }
-}
-.container-grid > div {
-  grid-area: grid-content;
-}
-
 /* =============
     Typography
 ============= */
-h1, h2, h3, h4 {
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
   margin: 0;
   padding: 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  line-height: 4.3125rem;
+  color: #FFCBCB;
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.125rem;
+}
+
+h3,
+h4 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
 }
 
 p {
   margin: 0;
   padding: 0;
+  color: #0E0D4E;
+}
+
+.section-title {
+  font-weight: 300;
 }
 
 /* =============
@@ -420,42 +430,436 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  background-color: #FFCBCB;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header > div {
+  display: grid;
+  grid-template-areas: "logo burger" "nav nav";
+  grid-template-columns: 80% auto;
+}
+header > div section,
+header > div nav {
+  padding: 0px;
+}
+header > div #logo-container {
+  grid-area: logo;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  header > div #logo-container {
+    display: none;
+  }
+}
+header > div #burger-container {
+  align-items: center;
+  display: flex;
+  grid-area: burger;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  header > div #burger-container {
+    display: none !important;
+  }
+}
+header > div #burger-container i {
+  cursor: pointer;
+}
+header > div #nav-container {
+  background-color: #FFCBCB;
+  grid-area: nav;
+  display: none;
+  padding: 0px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  header > div #nav-container {
+    display: block !important;
+  }
+}
+
 /* =============
     Footer
 ============= */
-/* =============
-    Demo
-============= */
-#demo-container {
+footer {
+  background-color: #FFCBCB;
+  padding: 11px 0;
+  grid-template-areas: "img text";
+  grid-template-columns: 50% 50%;
   display: grid;
-  grid-template-columns: auto 50% auto;
-  grid-template-areas: ". demo .";
 }
-#demo-container > div {
-  grid-area: demo;
-  height: 100vh;
+footer > div {
+  grid-area: img;
 }
-#demo-container > div ul {
-  height: 100%;
-  display: flex;
-  align-items: center;
+footer p {
+  grid-area: text;
+  position: relative;
+  text-align: right;
+  padding-top: 25px;
+  padding-right: 15px;
 }
 
-.ball {
-  height: 300px;
+/* =============
+    Section 1
+============= */
+#section-1 aside {
+  background-image: url("../img/section-1/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 280px;
+  display: grid;
+  text-align: center;
+  color: #FFCBCB;
+  padding-bottom: 0px;
+  grid-area: header;
+}
+@media (min-width: 768px) {
+  #section-1 aside {
+    height: 440px;
+  }
+}
+@media (min-width: 1200px) {
+  #section-1 aside {
+    height: 590px;
+  }
+}
+#section-1 aside h1 {
+  padding-top: 60px;
+}
+@media (min-width: 768px) {
+  #section-1 aside h1 {
+    grid-template-areas: ". header .";
+    grid-template-columns: 50% auto 50%;
+    padding: 170px;
+  }
+}
+#section-1 #section-1-content {
+  display: grid;
+}
+#section-1 #section-1-content #section-1-text {
+  background-color: #FFFADD;
+  padding-top: 0px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+#section-1 #section-1-content #section-1-text h3 {
+  color: #0E0D4E;
+  padding-top: 26px;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  #section-1 #section-1-content #section-1-text h3 {
+    line-height: 2.875rem;
+    margin: 15px;
+  }
+}
+@media (min-width: 992px) {
+  #section-1 #section-1-content #section-1-text h3 {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+#section-1 #section-1-content #section-1-text > div {
+  color: #0E0D4E;
+  background-color: #FFCBCB;
+  grid-area: h2;
+  margin: 16px auto;
+  padding: 16px;
   width: 300px;
-  margin-bottom: 300px;
-  border-radius: 500px;
+}
+#section-1 #section-1-content #section-1-text > div h2 {
+  text-align: center;
 }
 
-.green-ball {
-  background-color: #008000;
+/* =============
+    Section 2
+============= */
+#section-2 {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  #section-2 {
+    grid-template-areas: ". content .";
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#section-2 > div {
+  grid-area: content;
+}
+#section-2 > div h1 {
+  text-align: center;
+}
+#section-2 > div > div {
+  line-height: 1.6875rem;
+  padding: 10px;
+  text-indent: 30px;
+}
+@media (min-width: 768px) {
+  #section-2 > div > div {
+    line-height: 2.0625rem;
+  }
+}
+@media (min-width: 992px) {
+  #section-2 > div > div {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+#section-2 > div aside {
+  background-image: url("../img/section-2/video.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 194px;
+}
+@media (min-width: 768px) {
+  #section-2 > div aside {
+    height: 452px;
+  }
+}
+@media (min-width: 992px) {
+  #section-2 > div aside {
+    height: 550px;
+    margin: 20px;
+  }
 }
 
-.blue-ball {
-  background-color: #167cd0;
+/* =============
+    Section 3
+============= */
+#section-3 h1 {
+  text-align: center;
+}
+#section-3 #container {
+  display: block;
+  grid-area: container;
+}
+@media (min-width: 768px) {
+  #section-3 #container {
+    grid-template-areas: "picture text";
+    grid-template-columns: 40% auto;
+    display: grid;
+  }
+}
+#section-3 #container #section-3-image {
+  grid-area: picture;
+  display: grid;
+}
+#section-3 #container #section-3-image aside {
+  background-image: url("../img/section-3/washington.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 330px;
+  display: grid;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  #section-3 #container #section-3-image aside {
+    height: 1000px;
+  }
+}
+@media (min-width: 992px) {
+  #section-3 #container #section-3-image aside {
+    margin: 20px;
+  }
+}
+#section-3 #container #section-3-text {
+  grid-area: text;
+  display: grid;
+}
+#section-3 #container #section-3-text p {
+  padding: 10px;
+  line-height: 2.0625rem;
+  font-size: 1.0625rem;
+  padding-top: 20px;
+}
+@media (min-width: 992px) {
+  #section-3 #container #section-3-text p {
+    padding-right: 175px;
+  }
+}
+#section-3 #container #section-3-text h2 {
+  line-height: 1.9375rem;
+  font-size: 1.3125rem;
+  background-color: #FFCBCB;
+  color: #0E0D4E;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #section-3 #container #section-3-text h2 {
+    margin: 10px;
+  }
 }
 
-.yellow-ball {
-  background-color: #ffff00;
+/* =============
+    Section 4
+============= */
+#section-4 > div #section-4-title h1 {
+  text-align: center;
+}
+#section-4 #gallery ul {
+  list-style: none;
+  grid-area: list;
+}
+@media (min-width: 768px) {
+  #section-4 #gallery ul {
+    display: grid;
+    grid-template-areas: "gallery-1 gallery-2" "gallery-3 gallery-4";
+    grid-template-columns: 50% 50%;
+    grid-gap: 15px;
+  }
+}
+@media (min-width: 992px) {
+  #section-4 #gallery ul {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  #section-4 #gallery ul {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+#section-4 #gallery ul li {
+  background-color: #FFFADD;
+}
+#section-4 #gallery ul li aside {
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#section-4 #gallery ul li p {
+  padding: 10px;
+  line-height: 1.6875rem;
+  font-size: 1rem;
+}
+#section-4 #gallery li#gallery-1 {
+  grid-area: gallery-1;
+}
+#section-4 #gallery li#gallery-1 aside {
+  background-image: url("../img/section-4/1.png");
+}
+#section-4 #gallery #gallery-2 {
+  grid-area: gallery-2;
+}
+#section-4 #gallery #gallery-2 aside {
+  background-image: url("../img/section-4/2.png");
+}
+#section-4 #gallery #gallery-3 {
+  grid-area: gallery-3;
+}
+#section-4 #gallery #gallery-3 aside {
+  background-image: url("../img/section-4/3.png");
+}
+#section-4 #gallery #gallery-4 {
+  grid-area: gallery-4;
+}
+#section-4 #gallery #gallery-4 aside {
+  background-image: url("../img/section-4/4.png");
+}
+
+/* =============
+    Section 5
+============= */
+#section-5 > div h1 {
+  text-align: center;
+}
+#section-5 > div ul {
+  display: grid;
+  grid-gap: 20px;
+  grid-area: content;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  #section-5 > div ul {
+    grid-template-areas: "g1 g1 g1" "g1 g1 g1" "g1 g1 g1" "g2 g3 g4" "g5 g6 g7";
+    grid-template-rows: 33% 33% 33% s;
+  }
+}
+@media (min-width: 992px) {
+  #section-5 > div ul {
+    padding-left: 230px;
+    padding-right: 230px;
+  }
+}
+#section-5 > div ul li {
+  background-position: center;
+  background-size: cover;
+  height: 320px;
+}
+#section-5 > div ul #gallery1 {
+  background-image: url("../img/section-5/li1.png");
+}
+@media (min-width: 768px) {
+  #section-5 > div ul #gallery1 {
+    grid-area: g1;
+    height: 402px;
+  }
+}
+#section-5 > div ul #gallery2 {
+  background-image: url("../img/section-5/li2.png");
+}
+@media (min-width: 768px) {
+  #section-5 > div ul #gallery2 {
+    grid-area: g2;
+    height: 128px;
+  }
+}
+#section-5 > div ul #gallery3 {
+  background-image: url("../img/section-5/li3.png");
+}
+@media (min-width: 768px) {
+  #section-5 > div ul #gallery3 {
+    grid-area: g3;
+    height: 128px;
+  }
+}
+#section-5 > div ul #gallery4 {
+  background-image: url("../img/section-5/li4.png");
+}
+@media (min-width: 768px) {
+  #section-5 > div ul #gallery4 {
+    grid-area: g4;
+    height: 128px;
+  }
+}
+#section-5 > div ul #gallery5 {
+  background-image: url("../img/section-5/li5.png");
+}
+@media (min-width: 768px) {
+  #section-5 > div ul #gallery5 {
+    grid-area: g5;
+    height: 128px;
+  }
+}
+#section-5 > div ul #gallery6 {
+  background-image: url("../img/section-5/li6.png");
+}
+@media (min-width: 768px) {
+  #section-5 > div ul #gallery6 {
+    grid-area: g6;
+    height: 128px;
+  }
+}
+#section-5 > div ul #gallery7 {
+  background-image: url("../img/section-5/li7.png");
+}
+@media (min-width: 768px) {
+  #section-5 > div ul #gallery7 {
+    grid-area: g7;
+    height: 128px;
+  }
 }

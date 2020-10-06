@@ -1,12 +1,44 @@
 /* =============
     Typography
 ============= */
-h1,h2,h3,h4{
-    margin: 0;
-    padding: 0;
+body {
+    font-family: 'Rubik', sans-serif;
 }
 
-p{
+h1 {
     margin: 0;
     padding: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: rem-calc(48);
+    line-height: rem-calc(69);
+    color: $pink;
+
+}
+
+h2 {
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: rem-calc(18);
+
+
+}
+
+h3,
+h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: rem-calc(18);
+    line-height: rem-calc(26);
+
+
+
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: $blue;
+}
+
+.section-title {
+    font-weight: 300;
 }

@@ -1,0 +1,57 @@
+/* =============
+    Section 2
+============= */
+#section-2 {
+    display: grid;
+
+    @include xl {
+        grid-template-areas: ". content .";
+        grid-template-columns: auto 1200px auto;
+
+    }
+
+    >div {
+        grid-area: content;
+
+        h1 {
+            text-align: center;
+        }
+
+        >div {
+
+            line-height: rem-calc(27);
+            padding: 10px;
+            text-indent: 30px;
+
+            @include md {
+                line-height: rem-calc(33);
+            }
+
+            @include lg {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+
+        }
+
+        aside {
+            background-image: url('../img/section-2/video.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 194px;
+
+            @include md {
+                height: 452px;
+            }
+
+            @include lg {
+                height: 550px;
+                margin: 20px;
+            }
+
+
+        }
+    }
+
+}

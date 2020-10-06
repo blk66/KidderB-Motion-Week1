@@ -1,0 +1,88 @@
+/* =============
+    Section 1
+============= */
+#section-1 {
+    aside {
+        background-image: url('../img/section-1/hero.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 280px;
+        display: grid;
+        text-align: center;
+        color: $pink;
+        padding-bottom: 0px;
+        grid-area: header;
+
+
+        @include md {
+            height: 440px;
+
+        }
+
+        @include xl {
+            height: 590px;
+        }
+
+        h1 {
+            padding-top: 60px;
+
+            @include md {
+
+                grid-template-areas: ". header .";
+                grid-template-columns: 50% auto 50%;
+                padding: 170px;
+            }
+
+        }
+    }
+
+    #section-1-content {
+        display: grid;
+
+
+        #section-1-text {
+            background-color: $yellow;
+            padding-top: 0px;
+            text-align: center;
+            padding-bottom: 15px;
+
+            h3 {
+                color: $blue;
+                padding-top: 26px;
+                margin: 10px;
+
+                @include md {
+                    line-height: rem-calc(46);
+                    margin: 15px;
+
+                }
+
+                @include lg {
+                    margin-left: 150px;
+                    margin-right: 150px;
+
+                }
+
+            }
+
+            >div {
+                color: $blue;
+                background-color: $pink;
+                grid-area: h2;
+                margin: 16px auto;
+                padding: 16px;
+                width: 300px;
+
+
+                h2 {
+                    text-align: center;
+                }
+            }
+
+        }
+
+    }
+
+
+}

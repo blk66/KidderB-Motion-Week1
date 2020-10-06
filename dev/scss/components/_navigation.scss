@@ -1,3 +1,45 @@
 /* =============
     Navigation
 ============= */
+header {
+    font-family: 'Bebas Neue', cursive;
+    font-size: rem-calc(21);
+
+    #nav-container {
+        ul {
+            height: 100%;
+            text-align: center;
+
+            @include md {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                margin-bottom: 20px;
+
+                @include md {
+                    align-items: center;
+                    display: flex;
+                    margin: 20px;
+
+                }
+
+                a:link,
+                a:visited {
+                    color: $blue;
+                    text-decoration: none;
+
+                }
+
+                a:hover,
+                a:active {
+                    color: white;
+                }
+
+            }
+        }
+
+    }
+
+}
