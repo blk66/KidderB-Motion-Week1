@@ -325,50 +325,6 @@
 		"oAP": "/deploy/index.html",
 		"oF": 2
 		},
-	"/dev/js/animationSpeed.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/dev/js/animationSpeed-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dev/js/blueBall.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/dev/js/blueBall-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dev/js/demo.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dev/js/demo-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dev/js/greenBall.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/dev/js/greenBall-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dev/js/scripts.js": {
 		"bF": 4,
 		"ft": 64,
@@ -380,13 +336,35 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/dev/js/yellowBall.js": {
+	"/dev/js/sections/section-1.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/dev/js/sections/section-1-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dev/js/sections/section-2.js": {
 		"bF": 4,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/dev/js/yellowBall-min.js",
+		"oAP": "/dev/js/sections/section-2-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dev/js/sections/section-3.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/dev/js/sections/section-3-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

@@ -1,17 +1,10 @@
+//import{gsap} from "gsap";
 
 
-import {gsap} from "gsap";
-import {greenBallAnimation} from './greenBall.js';
-import {blueBallAnimation} from './blueBall.js';
-import {yellowBallAnimation} from './yellowBall.js';
+ import {Section1Animation} from "./sections/section-1.js";   
+ import {Section2Animation} from "./sections/section-2.js";
+ import {Section3Animation} from "./sections/section-3.js";
 
-
-
-var mainTL = gsap.timeline();
-
-mainTL.add(greenBallAnimation())
-
-        .add(blueBallAnimation())
-       
-        .add(yellowBallAnimation())
-        
+ Section1Animation();
+ Section2Animation();
+ Section3Animation();
